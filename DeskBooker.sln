@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core.Tests", "DeskBooker.Core.Tests\DeskBooker.Core.Tests.csproj", "{34101CBD-90CB-4960-B387-EC4BC00B3E18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core", "DeskBooker.Core\DeskBooker.Core.csproj", "{F159694A-1F21-48F8-9727-91983D055921}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F159694A-1F21-48F8-9727-91983D055921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F159694A-1F21-48F8-9727-91983D055921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F159694A-1F21-48F8-9727-91983D055921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F159694A-1F21-48F8-9727-91983D055921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
