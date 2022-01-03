@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core.Tests", "DeskBooker.Core.Tests\DeskBooker.Core.Tests.csproj", "{34101CBD-90CB-4960-B387-EC4BC00B3E18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34101CBD-90CB-4960-B387-EC4BC00B3E18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75F9A08D-6535-4156-ABE2-8FE77E86D259}
+	EndGlobalSection
+EndGlobal
