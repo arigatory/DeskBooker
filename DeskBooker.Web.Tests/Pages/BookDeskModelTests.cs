@@ -2,6 +2,11 @@
 using DeskBooker.Core.Domain;
 using DeskBooker.Core.Processor;
 using Moq;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DeskBooker.Web.Pages
 {
@@ -77,6 +82,61 @@ namespace DeskBooker.Web.Pages
 
             //Assert
             Assert.DoesNotContain("DeskBookingRequest.Date", _bookDeskModel.ModelState);
+        }
+
+
+        [Theory]
+        [InlineData(typeof(PageResult),false,null)]
+        [InlineData(typeof(PageResult), true, DeskBookingResultCode.NoDeskAvailable)]
+        [InlineData(typeof(RedirectToPageResult), true, DeskBookingResultCode.Success)]
+        public void ShouldReturnExpectedActionResult(Type expectedActionResultType,
+            bool isModeValid, DeskBookingResultCode? deskBookingResultCode)
+        {
+            if (!isModeValid)
+            {
+                _bookDeskModel.ModelState.AddModelError("JustAKey", "AnErrorMessage");
+            }
+
+            if (deskBookingResultCode.HasValue)
+            {
+                _deskBookingResult.Code = deskBookingResultCode.Value;
+            }
+
+            // Act
+            IActionResult actionResult = _bookDeskModel.OnPost();
+
+            // Assert
+            Assert.IsType(expectedActionResultType, actionResult);
+
+        }
+
+        [Fact]
+        public void ShouldRedirectToBookDeskConfirmationPage()
+        {
+            // Arrange
+            _deskBookingResult.Code = DeskBookingResultCode.Success;
+            _deskBookingResult.DeskBookingId = 7;
+            _deskBookingResult.FirstName = "Ivan";
+            _deskBookingResult.Date = new DateTime(2022,1,7);
+
+            // Act
+            IActionResult actionResult= _bookDeskModel.OnPost();
+
+            // Assert
+            var redirectToPageResult =  Assert.IsType<RedirectToPageResult>(actionResult);
+            Assert.Equal("BookDeskConfirmation", redirectToPageResult.PageName);
+
+            IDictionary<string,object> routeValues = redirectToPageResult.RouteValues;
+            Assert.Equal(3, routeValues.Count);
+
+            var deskBookingId = Assert.Contains("DeskBookingId", routeValues);
+            Assert.Equal(_deskBookingResult.DeskBookingId, deskBookingId);
+
+            var firstName = Assert.Contains("FirstName", routeValues);
+            Assert.Equal(_deskBookingResult.DeskBookingId, deskBookingId);
+
+            var date = Assert.Contains("Date", routeValues);
+            Assert.Equal(_deskBookingResult.DeskBookingId, deskBookingId);
         }
     }
 }
