@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core.Tests", "DeskBooker.Core.Tests\DeskBooker.Core.Tests.csproj", "{34101CBD-90CB-4960-B387-EC4BC00B3E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.Core.Tests", "DeskBooker.Core.Tests\DeskBooker.Core.Tests.csproj", "{34101CBD-90CB-4960-B387-EC4BC00B3E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core", "DeskBooker.Core\DeskBooker.Core.csproj", "{F159694A-1F21-48F8-9727-91983D055921}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.Core", "DeskBooker.Core\DeskBooker.Core.csproj", "{F159694A-1F21-48F8-9727-91983D055921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.DataAccess", "DeskBooker.DataAccess\DeskBooker.DataAccess.csproj", "{A11922EB-B43C-4543-A88D-F1DD9523329E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.DataAccess.Tests", "DeskBooker.DataAccess.Tests\DeskBooker.DataAccess.Tests.csproj", "{B5A09F09-7CED-47CC-BA8E-33D961DB1927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Web", "DeskBooker.Web\DeskBooker.Web.csproj", "{3CDAFDC8-36E4-4E6B-A9D0-8C28E51B36EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Web.Tests", "DeskBooker.Web.Tests\DeskBooker.Web.Tests.csproj", "{7DED1B28-7E49-4EC8-85B3-8D19CE86DD3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{F159694A-1F21-48F8-9727-91983D055921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F159694A-1F21-48F8-9727-91983D055921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F159694A-1F21-48F8-9727-91983D055921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11922EB-B43C-4543-A88D-F1DD9523329E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11922EB-B43C-4543-A88D-F1DD9523329E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11922EB-B43C-4543-A88D-F1DD9523329E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11922EB-B43C-4543-A88D-F1DD9523329E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A09F09-7CED-47CC-BA8E-33D961DB1927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A09F09-7CED-47CC-BA8E-33D961DB1927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A09F09-7CED-47CC-BA8E-33D961DB1927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A09F09-7CED-47CC-BA8E-33D961DB1927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CDAFDC8-36E4-4E6B-A9D0-8C28E51B36EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDAFDC8-36E4-4E6B-A9D0-8C28E51B36EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDAFDC8-36E4-4E6B-A9D0-8C28E51B36EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDAFDC8-36E4-4E6B-A9D0-8C28E51B36EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DED1B28-7E49-4EC8-85B3-8D19CE86DD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DED1B28-7E49-4EC8-85B3-8D19CE86DD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DED1B28-7E49-4EC8-85B3-8D19CE86DD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DED1B28-7E49-4EC8-85B3-8D19CE86DD3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
